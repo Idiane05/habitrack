@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  client:
+    build: ./client
+    ports:
+      - "80:80" # Expose frontend on standard port 80
+    restart: unless-stopped
+
+  server:
+    build: ./server
+    ports:
+      - "5000:5000" # Map backend correctly
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
