@@ -45,7 +45,7 @@ Steps followed:
 
 ### 1. Azure Resource Group
 
-![Resource Group](screenshots/resource-group.png)
+![Resource Group](screenshoot/Azureresources.png)
 
 ### 2. Azure Container Registry
 
