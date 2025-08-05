@@ -73,6 +73,6 @@ Due to these issues, I opted to complete the deployment manually using Azure CLI
 * How to troubleshoot container deployment errors
 * The value of breaking work into phases and tracking progress on a Kanban board
 
-```
+
 
 
