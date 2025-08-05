@@ -43,7 +43,7 @@ Make sure you have these installed:
 ###  Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/habitrack.git
+git clone https://github.com/Idiane05/habitrack.git
 cd habitrack
 ````
 

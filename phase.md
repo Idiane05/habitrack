@@ -59,6 +59,7 @@ Steps followed:
 
 I reviewed the pull request for a peer’s habit tracking app:
 🔗 [Link to PR Review](https://github.com/umumararungu/StuCents-app/pull/10)
+🔗 [Link to PR Review](https://github.com/munyaneza-w/ISHURI-APP/pull/10)
 
 ##  Reflection
 
