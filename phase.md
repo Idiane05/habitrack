@@ -47,18 +47,18 @@ Steps followed:
 
 ![Resource Group](screenshoot/Azureresources.png)
 
-### 2. Azure Container Registry
+### 2. BackEndAZEURE
 
-![ACR](screenshots/container-registry.png)
+![BCAZ](screenshoot/backendAZURE.png)
 
-### 3. Web App Running
+### 3. FrontendAZURE
 
-![Web App Running](screenshots/webapp-running.png)
+![Frontendazure](screenshoot/frontendAZURE.png)
 
 ##  Peer Review
 
 I reviewed the pull request for a peer’s habit tracking app:
-🔗 [Link to PR Review](https://github.com/example-peer/habitrack/pull/5)
+🔗 [Link to PR Review](https://github.com/umumararungu/StuCents-app/pull/10)
 
 ##  Reflection
 
