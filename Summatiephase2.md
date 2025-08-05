@@ -74,9 +74,15 @@ habitrack/
 
 ---
 
-##  Screenshots
+## Screenshots
 
-You can find screenshots of the Azure resources in the [screenshots](./screenshots/) folder.
+Here is the successful deployment on Azure App Service:
+
+![Deployment Screenshot](C:\Users\Administrator\Documents\GitHub\habitrack\screenshoot\backendAZURE.png)
+![Deployment Screenshot](C:\Users\Administrator\Documents\GitHub\habitrack\screenshoot\frontendAZURE.png)
+
+
+
 
 ---
 
