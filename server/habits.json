@@ -12,16 +12,21 @@
   {
     "id": 3,
     "name": "Study",
-    "done": false
+    "done": true
   },
   {
     "id": 4,
     "name": "Morning pages",
-    "done": false
+    "done": true
   },
   {
     "id": 1754389819210,
     "name": "Walk around",
     "done": true
+  },
+  {
+    "id": 1754414839408,
+    "name": "Movement In",
+    "done": false
   }
 ]
