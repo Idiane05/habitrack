@@ -57,3 +57,9 @@ app.put('/api/habits/:id', (req, res) => {
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server is running on http://0.0.0.0:${PORT}`);
 });
+
+app.delete('/api/habits/:id', (req, res) => {
+  const id = parseInt(req.params.id);
+  habits = habits.filter(h => h.id !== id);
+  res.sendStatus(204); // No content
+});
