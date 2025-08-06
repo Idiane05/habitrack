@@ -1,10 +1,5 @@
 [
   {
-    "id": 1754476722767,
-    "name": "Drinking water",
-    "done": false
-  },
-  {
     "id": 1754477033038,
     "name": "Exercising",
     "done": false
@@ -12,6 +7,16 @@
   {
     "id": 1754478880639,
     "name": "Morning pages",
+    "done": false
+  },
+  {
+    "id": 1754479470662,
+    "name": "Studying",
+    "done": false
+  },
+  {
+    "id": 1754482749480,
+    "name": "Playing",
     "done": false
   }
 ]
