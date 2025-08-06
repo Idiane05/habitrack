@@ -63,7 +63,7 @@ function App() {
 
   return (
     <div>
-      <h1>My Daily Habits</h1>
+      <h1>My Daily Habits Routines</h1>
 
       <input
         type="text"

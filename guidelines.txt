@@ -111,3 +111,15 @@ bash
 docker push habitrack123.azurecr.io/habitrack-client:v1
 docker push habitrack123.azurecr.io/habitrack-server:v1
 
+
+
+docker build -t habitrack123.azurecr.io/frontend:latest .
+az acr login --name habitrack123
+docker push habitrack123.azurecr.io/frontend:latest
+az webapp restart --name habittrack-rg-frontend-app --resource-group habitrack-rg
+az acr repository show-tags --name habitrack123 --repository frontend
+
+
+cd path\to\your\backend\folder
+docker build -t habitrack123.azurecr.io/backend:latest .
+docker push habitrack123.azurecr.io/backend:latest
