@@ -49,9 +49,8 @@ jobs:
 
     - name: Install Trivy vulnerability scanner
       run: |
-        sudo apt-get update && sudo apt-get install -y wget
-        wget https://github.com/aquasecurity/trivy/releases/latest/download/trivy_0.40.0_Linux-64bit.deb
-        sudo dpkg -i trivy_0.40.0_Linux-64bit.deb
+        sudo apt-get update
+        sudo apt-get install -y trivy
 
     - name: Scan client Docker image with Trivy
       run: trivy image --exit-code 1 --severity HIGH,CRITICAL ${{ env.REGISTRY }}/habitrack-client:v1 || true
