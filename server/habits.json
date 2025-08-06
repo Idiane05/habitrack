@@ -1,32 +1,7 @@
 [
   {
-    "id": 1,
-    "name": "Drink Water",
+    "id": 1754470969835,
+    "name": "working",
     "done": true
-  },
-  {
-    "id": 2,
-    "name": "Exercise",
-    "done": true
-  },
-  {
-    "id": 3,
-    "name": "Study",
-    "done": true
-  },
-  {
-    "id": 4,
-    "name": "Morning pages",
-    "done": true
-  },
-  {
-    "id": 1754389819210,
-    "name": "Walk around",
-    "done": true
-  },
-  {
-    "id": 1754414839408,
-    "name": "Movement In",
-    "done": false
   }
 ]
