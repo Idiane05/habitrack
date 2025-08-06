@@ -1,3 +1,98 @@
+# name: CI/CD Pipeline
+
+# on:
+#   push:
+#     branches:
+#       - main  # Trigger on push to main branch
+
+# env:
+#   REGISTRY: habitrack123.azurecr.io
+#   RESOURCE_GROUP: habitrack-rg
+#   SERVER_APP: habitrack-backend
+#   CLIENT_APP: habitrack-frontend-app
+
+# jobs:
+#   build-and-deploy:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#     - name: Checkout code
+#       uses: actions/checkout@v3
+
+#     - name: Setup Node.js
+#       uses: actions/setup-node@v3
+#       with:
+#         node-version: 18
+
+#     - name: Install dependencies & build client
+#       working-directory: ./client
+#       run: |
+#         npm install
+#         npm run build
+
+#     - name: Run tests
+#       working-directory: ./server
+#       run: |
+#         npm install
+#         npm test
+
+#     - name: Security scan - Dependency Check
+#       run: |
+#         npm audit --json > audit-report.json || true
+#         cat audit-report.json
+
+#     - name: Build and tag client Docker image
+#       run: docker build -t ${{ env.REGISTRY }}/habitrack-client:v1 ./client
+
+#     - name: Build and tag server Docker image
+#       run: docker build -t ${{ env.REGISTRY }}/habitrack-server:v1 ./server
+
+#     - name: Install Trivy vulnerability scanner
+#       run: |
+#         sudo apt-get update
+#         sudo apt-get install -y wget apt-transport-https gnupg lsb-release
+#         wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+#         echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
+#         sudo apt-get update
+#         sudo apt-get install -y trivy
+
+#     - name: Scan client Docker image with Trivy
+#       run: trivy image --exit-code 1 --severity HIGH,CRITICAL ${{ env.REGISTRY }}/habitrack-client:v1 || true
+
+#     - name: Scan server Docker image with Trivy
+#       run: trivy image --exit-code 1 --severity HIGH,CRITICAL ${{ env.REGISTRY }}/habitrack-server:v1 || true
+
+#     - name: Log in to Azure Container Registry
+#       uses: azure/docker-login@v1
+#       with:
+#         login-server: ${{ env.REGISTRY }}
+#         username: ${{ secrets.ACR_USERNAME }}
+#         password: ${{ secrets.ACR_PASSWORD }}
+
+#     - name: Push client image to ACR
+#       run: docker push ${{ env.REGISTRY }}/habitrack-client:v1
+
+#     - name: Push server image to ACR
+#       run: docker push ${{ env.REGISTRY }}/habitrack-server:v1
+
+#     - name: Azure CLI login
+#       uses: azure/login@v1
+#       with:
+#         creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+#     - name: Deploy server image to Azure App Service
+#       run: |
+#         az webapp config container set \
+#           --name ${{ env.SERVER_APP }} \
+#           --resource-group ${{ env.RESOURCE_GROUP }} \
+#           --container-image-name ${{ env.REGISTRY }}/habitrack-server:v1
+
+#     - name: Deploy client image to Azure App Service
+#       run: |
+#         az webapp config container set \
+#           --name ${{ env.CLIENT_APP }} \
+#           --resource-group ${{ env.RESOURCE_GROUP }} \
+#           --container-image-name ${{ env.REGISTRY }}/habitrack-client:v1
 name: CI/CD Pipeline
 
 on:
@@ -85,11 +180,11 @@ jobs:
         az webapp config container set \
           --name ${{ env.SERVER_APP }} \
           --resource-group ${{ env.RESOURCE_GROUP }} \
-          --container-image-name ${{ env.REGISTRY }}/habitrack-server:v1
+          --docker-custom-image-name ${{ env.REGISTRY }}/habitrack-server:v1
 
     - name: Deploy client image to Azure App Service
       run: |
         az webapp config container set \
           --name ${{ env.CLIENT_APP }} \
           --resource-group ${{ env.RESOURCE_GROUP }} \
-          --container-image-name ${{ env.REGISTRY }}/habitrack-client:v1
+          --docker-custom-image-name ${{ env.REGISTRY }}/habitrack-client:v1
