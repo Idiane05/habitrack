@@ -9,7 +9,7 @@ env:
   REGISTRY: habitrack123.azurecr.io
   RESOURCE_GROUP: habitrack-rg
   SERVER_APP: habitrack-backend
-  CLIENT_APP: habitrack-frontend
+  CLIENT_APP: habitrack-frontend-app
 
 jobs:
   build-and-deploy:
