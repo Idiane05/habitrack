@@ -57,7 +57,7 @@ This app has been manually deployed using Azure CLI and Azure Container Registry
 
 - **Container Registry**: [habitrack123.azurecr.io](https://habitrack123.azurecr.io)
 - **Backend App**: [https://habitrack-backend.azurewebsites.net](https://habitrack-backend.azurewebsites.net)
-- **Frontend App**: [https://habitrack-frontend.azurewebsites.net](https://habitrack-frontend.azurewebsites.net)
+- **Frontend App**: [https://habitrack-frontend-app.azurewebsites.net/](https://habitrack-frontend-app.azurewebsites.net/)
 
 ---
 
@@ -88,7 +88,7 @@ Here is the successful deployment on Azure App Service:
 
 ##  Live Application Links
 
--  **Frontend**: [https://habitrack-frontend.azurewebsites.net](https://habitrack-frontend.azurewebsites.net)
+-  **Frontend**: [https://habitrack-frontend-app.azurewebsites.net/](https://habitrack-frontend-app.azurewebsites.net/)
 -  **Backend**: [https://habitrack-backend.azurewebsites.net](https://habitrack-backend.azurewebsites.net)
 
 ---
