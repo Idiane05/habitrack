@@ -123,3 +123,5 @@ az acr repository show-tags --name habitrack123 --repository frontend
 cd path\to\your\backend\folder
 docker build -t habitrack123.azurecr.io/backend:latest .
 docker push habitrack123.azurecr.io/backend:latest
+
+az webapp restart --name habitrack-frontend-app --resource-group habitrack-rg

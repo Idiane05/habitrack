@@ -1,17 +1,17 @@
 [
   {
-    "id": 1754476691584,
-    "name": "Morning pages",
-    "done": true
-  },
-  {
     "id": 1754476722767,
     "name": "Drinking water",
-    "done": true
+    "done": false
   },
   {
     "id": 1754477033038,
     "name": "Exercising",
-    "done": true
+    "done": false
+  },
+  {
+    "id": 1754478880639,
+    "name": "Morning pages",
+    "done": false
   }
 ]
